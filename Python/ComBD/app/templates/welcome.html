@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-vindo</title>
+    <!-- Adicione o link para o CSS do Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MTEm9tG1fQ6WfAGF55CAjT5jzNae6pHlyR3N0r9K6z2U5vFnGz5MwT1ePfehuxnS" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-body">
+                <h2>Bem-vindo, {{ username }}!</h2>
+                <p>Tipo de usuário: {{ user_type }}</p>
+
+                <a href="/fornecedores" class="btn btn-primary">Ver fornecedores</a>
+                <a href="{{ url_for('routes_bp.search_fornecedor') }}" class="btn btn-success">Filtrar fornecedor</a>
+                <a href="{{ url_for('routes_bp.cadastrar_fornecedor') }}" class="btn btn-info">Cadastrar fornecedor</a>
+                <a href="{{ url_for('routes_bp.encontra_produto') }}" class="btn btn-info">Pesquisar Produtos</a>
+                <a href="/logout" class="btn btn-danger">Sair</a>
+            </div>
+        </div>
+    </div>
+    <!-- Adicione o link para o JavaScript do Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-pzjw8f+ua7Kw1TIqv8AqFtBEnbKtzK0A1b3g3fA6j6LZkp7H+bc7C5PI3UkkK8p" crossorigin="anonymous"></script>
+</body>
+</html>
